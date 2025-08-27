@@ -103,7 +103,6 @@ Provide dispatchable electricity generation and participate exclusively in the e
 
 ```
 ├─ H2Enterprises.ipynb           # Main Jupyter Notebook with the optimization model
-├─ H2Enterprises.py              # Python version of the Main Jupyter Notebook
 ├─ SimData.xlsx                  # Excel file containing the input simulation data
 └─ requirements.txt              # List of required Python packages
 ├─ Cases/                    
