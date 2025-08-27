@@ -78,9 +78,9 @@ Provide dispatchable electricity generation and participate exclusively in the e
 ---
 
 ## 🧪 Case Study
-- **Case 7**: The model is formulated in a deterministic single-scenario setting, where the Type A hydrogen enterprise operates without applying any risk management strategy.  
-- **Case 8**: The model is formulated in a scenario-based framework, where the Type A hydrogen enterprise applies a Conditional Value-at-Risk (CVaR) strategy at the portfolio level.   
-- **Case 9**: The model is also scenario-based, but the CVaR risk management strategy is applied individually at each site. This localized approach increases conservatism, leading to higher daily operating costs and more unused contracted PPA capacity compared to the portfolio-level strategy.
+- **Case A**: The model is formulated in a deterministic single-scenario setting, where the Type A hydrogen enterprise operates without applying any risk management strategy.  
+- **Case B**: The model is formulated in a scenario-based framework, where the Type A hydrogen enterprise applies a Conditional Value-at-Risk (CVaR) strategy at the portfolio level.   
+- **Case C**: The model is also scenario-based, but the CVaR risk management strategy is applied individually at each site. This localized approach increases conservatism, leading to higher daily operating costs and more unused contracted PPA capacity compared to the portfolio-level strategy.
  
 
 ---
@@ -107,9 +107,9 @@ Provide dispatchable electricity generation and participate exclusively in the e
 ├─ SimData.xlsx                  # Excel file containing the input simulation data
 └─ requirements.txt              # List of required Python packages
 ├─ Cases/                    
-│  ├─ Risk_Neutral.ipynb         # Risk-neutral (deterministic) scheduling
-│  ├─ Portfolio_Level.ipynb      # Portfolio-level risk-averse scheduling
-│  └─ Site_Level.ipynb           # Site-level risk-averse scheduling
+│  ├─ Case_A.ipynb               # Risk-neutral (deterministic) scheduling
+│  ├─ Case_B.ipynb               # Portfolio-level risk-averse scheduling
+│  └─ Case_C.ipynb               # Site-level risk-averse scheduling
 ```
 
 ---
