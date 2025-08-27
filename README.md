@@ -1,4 +1,4 @@
-# H2Enterprises-ADMM-Optimization
+# Coordinating Multi-Market Participation, Power Purchase Agreements, and Geo-Distributed Site Operations in Hydrogen Enterprises: An Equilibrium-Based ADMM
 
 This repository contains the implementation of the optimization framework developed for the paper “**Hydrogen Enterprises in Hydrogen-Electricity Markets and Guarantee of Origin Schemes: Valuing Coordinated Scheduling, Risk Management & Power Purchase Agreement Procurement**”. It has been developed as part of the **WinHy** project, funded by the Dutch Research Council (NWO) and Repsol S.A.
 
