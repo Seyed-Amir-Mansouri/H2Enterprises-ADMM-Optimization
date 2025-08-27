@@ -59,48 +59,57 @@ Provide dispatchable electricity generation and participate exclusively in the e
 ---
 
 ## ✨ Key Features
-- Multi-market integration: Co-optimizes participation in electricity, hydrogen (bundled and unbundled), and green certificate markets.  
-- Portfolio-level coordination: Unlocks flexibility by centrally scheduling distributed assets across multiple sites, beyond individual asset operation.  
-- Contractual heterogeneity: Supports both physical and virtual Power Purchase Agreements (PPAs) with take-as-produced structures.  
-- Policy compliance: Incorporates company-level green hydrogen targets, certification rules, and clean energy temporal matching constraints.  
-- Scalability: Applicable to hydrogen-centric companies of different sizes with multiple operational scenarios.  
+1. **Operational Coordination**
+   - Portfolio-level scheduling of decentralized sites, each comprising electrolyzers, Steam Methane Reforming (SMR) technologies, renewable generation units, and electrical energy storage (EES) systems.  
+   - Management of flexible downstream processes (DSPs) with hydrogen demand shifting.  
+2. **Multi-Market Participation**
+   - Joint clearing of electricity, hydrogen (bundled/unbundled), and green certificate markets.  
+   - Explicit modeling of interdependencies between market prices and contractual arrangements.  
+3. **Contractual Engagement**
+   - Incorporation of both physical and virtual PPAs as capacity-based agreements.  
+   - Analysis of how PPAs influence and are influenced by market-clearing dynamics.  
+4. **Risk and Policy Compliance**
+   - Integration of Conditional Value at Risk (CVaR) to evaluate portfolio-level vs. site-level risk hedging strategies.  
+   - Implementation of EU green hydrogen standards (RED III), ensuring temporal alignment between renewable electricity consumption and hydrogen production through Guarantee of Origin (GO) certificates.   
 
----
 
-## ⚙️ Model Highlights
-- Implemented as a day-ahead operational planning model.  
-- Objective function maximizes total company profit, considering hydrogen sales revenues, certificate transactions, electricity market exchanges, and PPA settlements.  
-- Captures asset-level technical constraints (electrolyzers, energy storage, renewable generation).  
-- Enables comparative analysis of different compliance strategies (per-site vs. portfolio-level enforcement).  
+<!-- ## ⚙️ Model Highlights -->
 
 ---
 
 ## 🧪 Case Study
-The framework is demonstrated on a representative hydrogen-centric company (**H2FLEX**) operating five sites across Spain. Three operational setups are compared:  
-1. Decentralized site-level operation  
-2. Centralized PPA dispatch  
-3. Full portfolio-level coordination with centralized policy enforcement  
+- **Case 7**: The model is formulated in a deterministic single-scenario setting, where the Type A hydrogen enterprise operates without applying any risk management strategy.  
+- **Case 8**: The model is formulated in a scenario-based framework, where the Type A hydrogen enterprise applies a Conditional Value-at-Risk (CVaR) strategy at the portfolio level.   
+- **Case 9**: The model is also scenario-based, but the CVaR risk management strategy is applied individually at each site. This localized approach increases conservatism, leading to higher daily operating costs and more unused contracted PPA capacity compared to the portfolio-level strategy.
+ 
 
 ---
 
 ## 📊 Key Results
-- Centralized coordination enables up to a **2.42× increase in hydrogen production**.  
-- Achieves a **9.4% reduction in daily operational costs**.  
-- Portfolio-level enforcement improves flexibility, allowing **46.6% higher hydrogen production** while maintaining green hydrogen certification compliance.  
-
+- **Value of PPAs**: Incorporating physical PPAs reduced daily operating costs for Type A, B, and C hydrogen enterprises by **24.27%**, **23.85%**, and **10.01%**, respectively.  
+  Adding virtual PPAs achieved further reductions of **16.2%**, **15.51%**, and **0.77%** for the same enterprises.  
+- **Impact on Market Prices**: The inclusion of PPAs lowered electricity market clearing prices by reducing reliance on expensive thermal units.  
+  Green certificate market prices declined by up to **40.6%** (from €3.2 to €1.9 per GO) due to reduced demand from hydrogen enterprises.  
+- **Operational Flexibility Benefits**: Activating EES systems reduced daily operating costs for Type A enterprises by **1.75%**, while enabling flexible DSPs increased cost reductions to **3.42%**.  
+  The combination of EES and flexible DSPs allowed hydrogen enterprises to exploit hourly price variations, shifting demand and storage operation between peak and off-peak periods.  
+- **Risk Management Insights**: Portfolio-level CVaR-based risk aversion reduced enterprise costs by up to **1.89%** compared to site-level risk aversion, while also improving PPA capacity utilization and flexibility.  
+  Site-level risk aversion was more conservative, leading to **higher costs and greater unused PPA capacity**.  
+- **Policy Impacts**: Increasing the green hydrogen target from **42% to 90%** raised daily costs by **3.46% (Type A)**, **2.25% (Type B)**, and **4.29% (Type C)**, mainly due to higher GO requirements and constrained scheduling flexibility.  
+  Green certificate prices increased by **92%**, and hydrogen prices rose by up to **5.06%** in bundled markets and **2.08%** in unbundled markets.  
+- **Algorithmic Performance**: The adaptive ADMM achieved significant improvements in computational efficiency, reducing convergence time by **237 seconds with 192 fewer iterations** in deterministic cases and by **2277 seconds with 452 fewer iterations** in scenario-based cases.  
 ---
 
 ## 📂 Repo Structure
 
 ```
-├─ H2FlexCo.ipynb                # Main Jupyter Notebook with the optimization model
-├─ H2FlexCo.py                   # Python version of the Main Jupyter Notebook
+├─ H2Enterprises.ipynb           # Main Jupyter Notebook with the optimization model
+├─ H2Enterprises.py              # Python version of the Main Jupyter Notebook
 ├─ SimData.xlsx                  # Excel file containing the input simulation data
 └─ requirements.txt              # List of required Python packages
 ├─ Cases/                    
-│  ├─ Decentralized.ipynb        # Decentralized site-level operation
-│  ├─ Centralized_PPA.ipynb      # Centralized PPA dispatch
-│  └─ Portfolio_Level.ipynb      # Full portfolio-level coordination with centralized policy enforcement
+│  ├─ Risk_Neutral.ipynb         # Risk-neutral (deterministic) scheduling
+│  ├─ Portfolio_Level.ipynb      # Portfolio-level risk-averse scheduling
+│  └─ Site_Level.ipynb           # Site-level risk-averse scheduling
 ```
 
 ---
@@ -117,7 +126,7 @@ pip install -r requirements.txt
 
 ## 📈 How to Run
 
-1. Open `H2FlexCo.ipynb` in Jupyter Notebook or JupyterLab.
+1. Open `H2Enterprises.ipynb` in Jupyter Notebook or JupyterLab.
 2. Ensure `SimData.xlsx` is in the same directory as the notebook.
 3. Run all cells in the notebook to execute the model and generate results.
 
