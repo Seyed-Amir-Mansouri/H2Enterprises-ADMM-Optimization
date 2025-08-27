@@ -32,7 +32,7 @@ To solve this complex decentralized problem, the framework employs an adaptive A
 
 ### Agents Considered in the Framework
 
-**1. Type A Hydrogen Enterprises**
+**1. Type A Hydrogen Enterprises**  
 Operate multiple decentralized sites with electrolyzers, SMR units, renewable generation, energy storage, and flexible DSPs. They participate in electricity, bundled and unbundled hydrogen, and green certificate markets, as well as in physical and virtual PPAs. They employ the CVaR method to manage PPA-related uncertainties.  
 
 **2. Type B Hydrogen Enterprises**  
