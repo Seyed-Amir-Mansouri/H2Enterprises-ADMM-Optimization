@@ -4,7 +4,7 @@
 
 # Coordinating Multi-Market Participation, Power Purchase Agreements, and Geo-Distributed Site Operations in Hydrogen Enterprises: An Equilibrium-Based ADMM
 
-This repository contains the implementation of the optimization framework developed for the paper “**Valuing Coordinated Scheduling, Risk Management, and Power Purchase Agreements for Industrial Hydrogen Enterprises in the Hydrogen, Electricity, and Green Certificate Markets**”. It has been developed as part of the **WinHy** project, funded by the Dutch Research Council (NWO) and Repsol S.A.
+This repository contains the implementation of the optimization framework developed for the paper “**Valuing Coordinated Scheduling, Risk Management, and Power Purchase Agreements for Industrial Hydrogen Enterprises in the Hydrogen, Electricity, and Green Certificate Markets**”. It has been developed as part of the **WinHy** project, funded by the Dutch Research Council (NWO) and Repsol S.A. The framework is implemented in Python (version 3.12.5) within a Jupyter Notebook environment using Pyomo.
 
 ## 📝 Description
 
