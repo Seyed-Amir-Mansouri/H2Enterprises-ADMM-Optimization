@@ -142,6 +142,7 @@ The code uses the following libraries:
 - `tabulate`
 - `ipython`
 - `jupyter`
+- `openpyxl`
 
 You also need a solver like GUROBI for Pyomo.
 
