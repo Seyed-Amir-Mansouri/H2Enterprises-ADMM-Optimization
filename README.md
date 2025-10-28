@@ -141,7 +141,7 @@ The code uses the following libraries:
 - `seaborn`
 - `tabulate`
 - `ipython`
-- `jupyter`
+- `gurobipy`
 - `openpyxl`
 
 You also need a solver like GUROBI for Pyomo.
