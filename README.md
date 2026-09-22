@@ -45,7 +45,7 @@ Do not own hydrogen production units and act solely as consumers. They procure h
 These units sell electricity through physical PPAs and issue GOs for the buyer.  
 
 **5. Type B Renewable Units**  
-These units sell electricity through physical PPAs and issue GOs for the buyer.  
+These units sell electricity through virtual PPAs and issue GOs for the buyer.  
 
 **6. Type C Renewable Units**  
 Sell electricity in the electricity market and trade GOs in the green certificate market.  
@@ -92,11 +92,11 @@ Provide dispatchable electricity generation and participate exclusively in the e
   Green certificate market prices declined by up to **40.6%** (from €3.2 to €1.9 per GO) due to reduced demand from hydrogen enterprises.  
 - **Operational Flexibility Benefits**: Activating EES systems reduced daily operating costs for Type A enterprises by **1.75%**, while enabling flexible DSPs increased cost reductions to **3.42%**.  
   The combination of EES and flexible DSPs allowed hydrogen enterprises to exploit hourly price variations, shifting demand and storage operation between peak and off-peak periods.  
-- **Risk Management Insights**: Portfolio-level CVaR-based risk aversion reduced enterprise costs by up to **1.89%** compared to site-level risk aversion, while also improving PPA capacity utilization and flexibility.  
+- **Risk Management Insights**: Portfolio-level CVaR-based risk aversion reduced enterprise costs by up to **1.93%** compared to site-level risk aversion, while also improving PPA capacity utilization and flexibility.  
   Site-level risk aversion was more conservative, leading to **higher costs and greater unused PPA capacity**.  
 - **Policy Impacts**: Increasing the green hydrogen target from **42% to 90%** raised daily costs by **3.46% (Type A)**, **2.25% (Type B)**, and **4.29% (Type C)**, mainly due to higher GO requirements and constrained scheduling flexibility.  
-  Green certificate prices increased by **92%**, and hydrogen prices rose by up to **5.06%** in bundled markets and **2.08%** in unbundled markets.  
-- **Algorithmic Performance**: The adaptive ADMM achieved significant improvements in computational efficiency, reducing convergence time by **237 seconds with 192 fewer iterations** in deterministic cases and by **2277 seconds with 452 fewer iterations** in scenario-based cases.  
+  Green certificate prices increased by **92.02%**, and hydrogen prices rose by up to **5.06%** in bundled markets and **2.08%** in unbundled markets.  
+- **Algorithmic Performance**: The adaptive ADMM achieved significant improvements in computational efficiency, reducing convergence time by **238.8 seconds with 222 fewer iterations** in deterministic cases and by **2468.42 seconds with 572 fewer iterations** in scenario-based cases.  
 ---
 
 ## 📂 Repo Structure
